@@ -1,0 +1,85 @@
+body {
+    background-image: url('background.jpg'); /* Caminho para a imagem de fundo */
+    background-size: cover; /* Ajusta o tamanho da imagem para cobrir toda a tela */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+    background-attachment: fixed; /* Faz com que a imagem de fundo não se mova ao rolar */
+    height: 100vh; /* Garante que o body cubra toda a altura da tela */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    bottom: -25px; /* Distância do topo da página */
+    left: 10px; /* Distância da direita da página */
+    width: 300px; /* Ajuste o tamanho da logo conforme necessário */
+    height: auto;
+    z-index: 1000; /* Garante que a logo fique acima de outros elementos */
+}
+
+
+.container {
+    width: 600px; /* Ajuste o valor conforme necessário para aumentar a largura */
+    margin: 0 auto; /* Centraliza o formulário na página */
+    padding: 20px; /* Espaçamento interno para o conteúdo do formulário */
+    background-color: #f9f9f9; /* Cor de fundo (opcional) */
+    border-radius: 8px; /* Bordas arredondadas (opcional) */
+    background-color: rgba(214, 214, 214, 0.7); /* Fundo cinza claro com 70% de opacidade */
+}
+
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Aumenta o espaço entre os campos do formulário */
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px; /* Espaço entre os grupos de campos */
+}
+
+@font-face {
+    font-family: 'Dubai';
+    src: url('fonts/Dubai-Regular.ttf') format('truetype');
+}
+
+.label-estilo {
+    color: grey;
+    font-size: 20px;
+    font-family: 'Dubai', Arial, sans-serif;
+}
+
+
+input {
+    padding: 12px; /* Mantém o padding nas caixas de texto */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+
+}
+
+button {
+    background-color: #fc4040;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #f91f1f;
+}

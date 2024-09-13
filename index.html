@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibo de Pagamento</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS básico para fontes e cores (pode ser movido para o arquivo styles.css) */
+        .campo label {
+            font-size: 16px;
+            color: #515151;
+        }
+        .input-nome-cliente,
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px;
+        }
+        .botao-container {
+            text-align: center;
+        }
+        .botao {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #ff2b2b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .botao:hover {
+            background-color: #b30000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Gerar Recibo</h1>
+        <form id="reciboForm">
+            <div class="campo">
+                <label for="nomeCliente"><font size=4 color="#515151">Nome do Cliente:</font></label>
+                <input type="text" id="nomeCliente" class="input-nome-cliente">
+            </div>
+            
+            <div class="campo">
+                <label for="numNotaFiscal"><font size=4 color="#515151">Número da Nota Fiscal:</font></label>
+                <input type="text" id="numNotaFiscal">
+            </div>
+
+            <div class="campo">
+                <label for="valorNotaFiscal"><font size=4 color="#515151">Valor da Nota Fiscal (R$):</font></label>
+                <input type="number" id="valorNotaFiscal" step="0.01">
+            </div>
+
+            <div class="campo">
+                <label for="qtdVolumes"><font size=4 color="#515151">Quantidade de Volumes:</font></label>
+                <input type="number" id="qtdVolumes">
+            </div>
+
+            <div class="botao-container">
+                <button type="submit" class="botao"><font size="5">Gerar Recibo</font></button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
